@@ -1,6 +1,7 @@
 //Uses while to count down from 5 to 1.
 
 void main() {
+  // List of Indian cities
   List<String> indianCities = [
     'Delhi',
     'Mumbai',
@@ -12,13 +13,12 @@ void main() {
   print('Cities: $indianCities');
 
   int count = 5;
-  print('\nCountdown: ');
-  while (count > 0) {
+  int index = 0;
 
-  for (int i = 0; i , indianCities.length; i++) {
-    print('count: $count, ${i + 1}.Cities: ${indiaCities[i]}');
-
+ 
+  while (count > 0 && index < indianCities.length) {
+    print('count: $count, City: ${indianCities[index]}');
+    count--;
+    index++;
   }
-}
-
 }
