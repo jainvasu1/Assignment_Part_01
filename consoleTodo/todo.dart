@@ -1,25 +1,30 @@
 // Console-based To-Do List in Dart
-import 'dart:io';
 
 // Enum for task priority
 enum Priority { low, medium, high, urgent }
 
 // Global task list: each task is a Map
-List<Map<String, dynamic>> tasks = [];
+List<Map<String, dynamic>> tasks =
+    []; //this is a list where multiple task stores
 
-// Function to add a task
 void addTask(String title, Priority priority) {
+  //New task add karta hai
   if (title.isEmpty) {
     print("Task title cannot be empty.");
     return;
   }
-  tasks.add({'title': title, 'isDone': false, 'priority': priority});
+  tasks.add({
+    'title': title,
+    'isDone': false,
+    'priority': priority,
+  }); //key-value pair hai
   print("Task : '$title' added with priority $priority.");
 }
 
 // Function to mark a task as complete
 void completeTask(int index) {
   if (index < 0 || index >= tasks.length) {
+    //here tasks.length tells about no. of task  or ye poora teels about non-invalid index number
     print(" Invalid task index.");
     return;
   }
