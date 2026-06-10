@@ -9,13 +9,9 @@ List<int> filterPassing(List<int> scores) {
 }
 
 void main() {
-  try {
-    List<int> scores = [45, 60, 75, 59, 90, 100, 30];
-    List<int> passingScores = filterPassing(scores);
+  List<int> scores = [45, 60, 75, 59, 90, 100, 30];
+  List<int> passingScores = filterPassing(scores);
 
-    print("Original scores: $scores");
-    print("Passing scores (>= 60): $passingScores");
-  } catch (e) {
-    print("Error: $e");
-  }
+  print("Original scores: $scores");
+  print("Passing scores (>= 60): $passingScores");
 }
